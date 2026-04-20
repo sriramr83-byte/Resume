@@ -1,173 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sriram Raghavan - Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sriram Raghavan - Resume</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f8;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-        }
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+}
 
-        h1 {
-            text-align: center;
-        }
+h1 {
+    text-align: center;
+}
 
-        .contact {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.contact {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        .section {
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+/* Main sections */
+.section {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
 
-        .section-header {
-            background-color: #0073e6;
-            color: white;
-            padding: 12px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+.section-header {
+    background-color: #0073e6;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-        .section-content {
-            display: none;
-            padding: 15px;
-            background: #fafafa;
-        }
+.section-content {
+    display: none;
+    padding: 15px;
+    background: #fafafa;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+/* Nested project sections */
+.sub-section {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
 
-        li {
-            margin-bottom: 8px;
-        }
-    </style>
+.sub-header {
+    background-color: #e6f0ff;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sub-content {
+    display: none;
+    padding: 10px;
+    background: #fff;
+}
+
+/* Optional smooth feel */
+.section-content,
+.sub-content {
+    transition: all 0.3s ease;
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>Sriram Raghavan</h1>
-    <div class="contact">
-        📞 +91-9941374772 | ✉️ Sriram.r83@gmail.com
+<h1>Sriram Raghavan</h1>
+<div class="contact">
+📞 +91-9941374772 | ✉️ Sriram.r83@gmail.com
+</div>
+
+<!-- Profile Summary -->
+<div class="section">
+    <div class="section-header" onclick="toggleSection('summary')">
+        Profile Summary
+    </div>
+    <div id="summary" class="section-content">
+        <ul>
+            <li>PMP® certified professional with 20+ years in QA, automation, and data validation.</li>
+            <li>Expert in Selenium, UFT, API testing, Azure DevOps, ETL testing.</li>
+            <li>Strong experience in Python, PySpark, and data reconciliation.</li>
+            <li>Led large QA teams and managed end-to-end delivery.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Skills -->
+<div class="section">
+    <div class="section-header" onclick="toggleSection('skills')">
+        Skillset
+    </div>
+    <div id="skills" class="section-content">
+        <ul>
+            <li><b>QA Tools:</b> Selenium, UFT, TestNG, Postman</li>
+            <li><b>Languages:</b> Java, Python, VBScript</li>
+            <li><b>Cloud:</b> Azure DevOps, AWS S3</li>
+            <li><b>Data:</b> SQL, Parquet, JSON, Pandas</li>
+            <li><b>Testing:</b> Functional, API, ETL, Regression, Performance</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Experience -->
+<div class="section">
+    <div class="section-header" onclick="toggleSection('experience')">
+        Experience
+    </div>
+    <div id="experience" class="section-content">
+        <ul>
+            <li><b>DXC Technologies</b> (2010 – Present) – Sr Analyst</li>
+            <li><b>Wipro Technologies</b> (2008 – 2010) – Senior Test Engineer</li>
+            <li><b>HCL Technologies</b> (2005 – 2007) – Test Engineer</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Certifications -->
+<div class="section">
+    <div class="section-header" onclick="toggleSection('certifications')">
+        Certifications
+    </div>
+    <div id="certifications" class="section-content">
+        <ul>
+            <li>PMP® – PMI</li>
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>Azure AZ-900 & AI-900</li>
+            <li>ISTQB Advanced Test Manager</li>
+            <li>Certified Scrum Master</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Key Projects -->
+<div class="section">
+    <div class="section-header" onclick="toggleSection('projects')">
+        Key Projects
     </div>
 
-    <!-- Summary -->
-    <div class="section">
-        <div class="section-header" onclick="toggleSection('summary')">
-            Profile Summary
-        </div>
-        <div id="summary" class="section-content">
-            <ul>
-                <li>PMP® certified professional with 20+ years in QA, automation, and data validation.</li>
-                <li>Expertise in Selenium, UFT, API testing, Azure DevOps, ETL testing.</li>
-                <li>Strong experience in Python, PySpark, and data reconciliation.</li>
-                <li>Led large QA teams and managed end-to-end testing delivery.</li>
-            </ul>
-        </div>
-    </div>
+    <div id="projects" class="section-content">
 
-    <!-- Skills -->
-    <div class="section">
-        <div class="section-header" onclick="toggleSection('skills')">
-            Skillset
+        <div class="sub-section">
+            <div class="sub-header" onclick="toggleSubSection('proj1')">
+                Chevron MCBU
+            </div>
+            <div id="proj1" class="sub-content">
+                Managed QA services and automation delivery for Chevron’s MCBU,
+                supporting multiple applications and leading QA teams.
+            </div>
         </div>
-        <div id="skills" class="section-content">
-            <ul>
-                <li><b>QA Tools:</b> Selenium, UFT, TestNG, Postman</li>
-                <li><b>Languages:</b> Java, Python, VBScript</li>
-                <li><b>Cloud:</b> Azure DevOps, AWS S3</li>
-                <li><b>Data:</b> SQL, Parquet, JSON, Pandas</li>
-                <li><b>Testing:</b> Functional, API, ETL, Regression, Performance</li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- Experience -->
-    <div class="section">
-        <div class="section-header" onclick="toggleSection('experience')">
-            Experience
+        <div class="sub-section">
+            <div class="sub-header" onclick="toggleSubSection('proj2')">
+                Daily Allocation & IEMF
+            </div>
+            <div id="proj2" class="sub-content">
+                Led automation and functional testing with Selenium frameworks
+                across multiple enterprise applications.
+            </div>
         </div>
-        <div id="experience" class="section-content">
-            <ul>
-                <li><b>DXC Technologies</b> (2010 – Present) – Sr Analyst</li>
-                <li><b>Wipro Technologies</b> (2008 – 2010) – Senior Test Engineer</li>
-                <li><b>HCL Technologies</b> (2005 – 2007) – Test Engineer</li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- Certifications -->
-    <div class="section">
-        <div class="section-header" onclick="toggleSection('certifications')">
-            Certifications
+        <div class="sub-section">
+            <div class="sub-header" onclick="toggleSubSection('proj3')">
+                AT&T Dolphin
+            </div>
+            <div id="proj3" class="sub-content">
+                Performed ETL testing, BOXI validation, and SQL backend verification
+                for telecom data systems.
+            </div>
         </div>
-        <div id="certifications" class="section-content">
-            <ul>
-                <li>PMP® – PMI</li>
-                <li>AWS Certified Cloud Practitioner</li>
-                <li>Azure AZ-900 & AI-900</li>
-                <li>ISTQB Advanced Test Manager</li>
-                <li>Certified Scrum Master</li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- Projects -->
-    <div class="section">
-        <div class="section-header" onclick="toggleSection('projects')">
-            Key Projects
+        <div class="sub-section">
+            <div class="sub-header" onclick="toggleSubSection('proj4')">
+                Kaiser OPPR
+            </div>
+            <div id="proj4" class="sub-content">
+                Built automation frameworks for data warehouse testing and developed reusable components.
+            </div>
         </div>
-        <div id="projects" class="section-content">
-            <ul>
-                <li>Chevron MCBU – Managed QA services and automation delivery</li>
-                <li>Daily Allocation & IEMF – Automation and functional testing</li>
-                <li>AT&T Dolphin – ETL and BOXI testing</li>
-                <li>Kaiser OPPR – Data warehouse testing automation</li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- Education -->
-    <div class="section">
-        <div class="section-header" onclick="toggleSection('education')">
-            Education
-        </div>
-        <div id="education" class="section-content">
-            <ul>
-                <li>B.E. Electrical & Electronics – University of Madras (2004)</li>
-            </ul>
-        </div>
     </div>
+</div>
+
+<!-- Education -->
+<div class="section">
+    <div class="section-header" onclick="toggleSection('education')">
+        Education
+    </div>
+    <div id="education" class="section-content">
+        <ul>
+            <li>B.E. Electrical & Electronics – University of Madras (2004)</li>
+        </ul>
+    </div>
+</div>
 
 </div>
 
 <script>
-    function toggleSection(id) {
-        var section = document.getElementById(id);
+// Main section toggle
+function toggleSection(id) {
+    var section = document.getElementById(id);
 
-        if (section.style.display === "block") {
-            section.style.display = "none";
-        } else {
-            section.style.display = "block";
+    section.style.display =
+        section.style.display === "block" ? "none" : "block";
+}
+
+// Nested accordion (only one open at a time)
+function toggleSubSection(id) {
+    var all = document.querySelectorAll(".sub-content");
+
+    all.forEach(function(el) {
+        if (el.id !== id) {
+            el.style.display = "none";
         }
-    }
+    });
+
+    var current = document.getElementById(id);
+
+    current.style.display =
+        current.style.display === "block" ? "none" : "block";
+}
 </script>
 
 </body>
