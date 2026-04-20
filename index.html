@@ -7,73 +7,108 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background-color: #f4f6f8;
+    background: #f5f7fb;
 }
 
+/* Container */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 20px;
+}
+
+/* Header Card */
+.header-card {
     background: white;
-}
-
-h1 {
-    text-align: center;
-}
-
-.contact {
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Main sections */
-.section {
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
+.header-card h1 {
+    margin: 0;
 }
 
-.section-header {
-    background-color: #0073e6;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.section-content {
-    display: none;
-    padding: 15px;
-    background: #fafafa;
-}
-
-/* Nested project sections */
-.sub-section {
+.contact {
     margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    color: #555;
+}
+
+/* Card sections */
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 16px;
     overflow: hidden;
+}
+
+/* Card header */
+.card-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header:hover {
+    background: #f0f4ff;
+}
+
+/* Arrow */
+.arrow {
+    transition: transform 0.3s;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+/* Content */
+.card-content {
+    display: none;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Lists */
+li {
+    margin-bottom: 12px;
+}
+
+/* Nested project cards */
+.sub-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-top: 10px;
 }
 
 .sub-header {
-    background-color: #e6f0ff;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-header:hover {
+    background: #f9fbff;
 }
 
 .sub-content {
     display: none;
-    padding: 10px;
-    background: #fff;
+    padding: 12px;
+    border-top: 1px solid #eee;
 }
 
-/* Optional smooth feel */
-.section-content,
-.sub-content {
+/* Smooth feel */
+.card-content, .sub-content {
     transition: all 0.3s ease;
 }
 </style>
@@ -83,116 +118,99 @@ h1 {
 
 <div class="container">
 
-<h1>Sriram Raghavan</h1>
-<div class="contact">
-📞 +91-9941374772 | ✉️ Sriram.r83@gmail.com
+<!-- Header -->
+<div class="header-card">
+    <h1>Sriram Raghavan</h1>
+    <div class="contact">
+        📞 +91-9941374772 | ✉️ Sriram.r83@gmail.com
+    </div>
 </div>
 
-<!-- Profile Summary -->
-<div class="section">
-    <div class="section-header" onclick="toggleSection('summary')">
-        Profile Summary
+<!-- Profile -->
+<div class="card">
+    <div class="card-header" onclick="toggleCard('summary', this)">
+        Profile Summary <span class="arrow">▶</span>
     </div>
-    <div id="summary" class="section-content">
+    <div id="summary" class="card-content">
         <ul>
-            <li>Certified Project Management Professional (PMP®) with 20+ years of experience in automation testing, data quality and reconciliation testing, API validation, and cross-functional project leadership</li>
-            <li>Managed all aspects of successful project execution, including contract governance ,client expectation management and satisfaction,  financial results, team performance and delivery of quality work. Directed, implemented, and managed manual / automated functional test procedures and processes: Scope definition, delivery estimates, automation library design, test scheduling, progress reporting ,script creation, execution and quality signoff. </li>
-            <li>Proven expertise in designing enterprise-scale automation frameworks, leading high-performance QA teams, and delivering managed quality assurance services for Fortune 500 clients including Chevron Corporation, AT&T and Kaiser Permanente.</li>
-            <li>Managed end-to-end QA for the solution delivery team by defining tailored QA processes for various project types, processes and technologies (SAFe, DevOps, PEGA, API, Azure Activity Functions, Storage Containers). Implemented a seamless QA integration for client's Mid Continental Business Unit’s IT operations groups and applications</li>
+            <li>PMP® certified professional with 20+ years in QA, automation, and data validation.</li>
+            <li>Expert in Selenium, UFT, API testing, Azure DevOps, ETL testing.</li>
+            <li>Strong experience in Python, PySpark, and data reconciliation.</li>
+            <li>Led large QA teams and managed end-to-end delivery.</li>
         </ul>
     </div>
 </div>
 
 <!-- Skills -->
-<div class="section">
-    <div class="section-header" onclick="toggleSection('skills')">
-        Skillset
+<div class="card">
+    <div class="card-header" onclick="toggleCard('skills', this)">
+        Skillset <span class="arrow">▶</span>
     </div>
-    <div id="skills" class="section-content">
+    <div id="skills" class="card-content">
         <ul>
             <li><b>QA Tools:</b> Selenium, UFT, TestNG, Postman</li>
             <li><b>Languages:</b> Java, Python, VBScript</li>
             <li><b>Cloud:</b> Azure DevOps, AWS S3</li>
             <li><b>Data:</b> SQL, Parquet, JSON, Pandas</li>
-            <li><b>Testing:</b> Functional, API, ETL, Regression, Performance</li>
         </ul>
     </div>
 </div>
 
 <!-- Experience -->
-<div class="section">
-    <div class="section-header" onclick="toggleSection('experience')">
-        Experience
+<div class="card">
+    <div class="card-header" onclick="toggleCard('experience', this)">
+        Experience <span class="arrow">▶</span>
     </div>
-    <div id="experience" class="section-content">
+    <div id="experience" class="card-content">
         <ul>
-            <li><b>DXC Technologies</b> (2010 – Present) – Sr Analyst</li>
-            <li><b>Wipro Technologies</b> (2008 – 2010) – Senior Test Engineer</li>
-            <li><b>HCL Technologies</b> (2005 – 2007) – Test Engineer</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Certifications -->
-<div class="section">
-    <div class="section-header" onclick="toggleSection('certifications')">
-        Certifications
-    </div>
-    <div id="certifications" class="section-content">
-        <ul>
-            <li>PMP® – PMI</li>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>Azure AZ-900 & AI-900</li>
-            <li>ISTQB Advanced Test Manager</li>
-            <li>Certified Scrum Master</li>
+            <li><b>DXC Technologies</b> (2010 – Present)</li>
+            <li><b>Wipro Technologies</b> (2008 – 2010)</li>
+            <li><b>HCL Technologies</b> (2005 – 2007)</li>
         </ul>
     </div>
 </div>
 
 <!-- Key Projects -->
-<div class="section">
-    <div class="section-header" onclick="toggleSection('projects')">
-        Key Projects
+<div class="card">
+    <div class="card-header" onclick="toggleCard('projects', this)">
+        Key Projects <span class="arrow">▶</span>
     </div>
 
-    <div id="projects" class="section-content">
+    <div id="projects" class="card-content">
 
-        <div class="sub-section">
-            <div class="sub-header" onclick="toggleSubSection('proj1')">
-                Chevron MCBU
+        <div class="sub-card">
+            <div class="sub-header" onclick="toggleSub('p1', this)">
+                Chevron MCBU <span>▶</span>
             </div>
-            <div id="proj1" class="sub-content">
-                Managed QA services and automation delivery for Chevron’s MCBU,
-                supporting multiple applications and leading QA teams.
+            <div id="p1" class="sub-content">
+                Managed QA services and automation delivery for Chevron MCBU.
             </div>
         </div>
 
-        <div class="sub-section">
-            <div class="sub-header" onclick="toggleSubSection('proj2')">
-                Daily Allocation & IEMF
+        <div class="sub-card">
+            <div class="sub-header" onclick="toggleSub('p2', this)">
+                Daily Allocation & IEMF <span>▶</span>
             </div>
-            <div id="proj2" class="sub-content">
-                Led automation and functional testing with Selenium frameworks
-                across multiple enterprise applications.
-            </div>
-        </div>
-
-        <div class="sub-section">
-            <div class="sub-header" onclick="toggleSubSection('proj3')">
-                AT&T Dolphin
-            </div>
-            <div id="proj3" class="sub-content">
-                Performed ETL testing, BOXI validation, and SQL backend verification
-                for telecom data systems.
+            <div id="p2" class="sub-content">
+                Led automation and functional testing using Selenium frameworks.
             </div>
         </div>
 
-        <div class="sub-section">
-            <div class="sub-header" onclick="toggleSubSection('proj4')">
-                Kaiser OPPR
+        <div class="sub-card">
+            <div class="sub-header" onclick="toggleSub('p3', this)">
+                AT&T Dolphin <span>▶</span>
             </div>
-            <div id="proj4" class="sub-content">
-                Built automation frameworks for data warehouse testing and developed reusable components.
+            <div id="p3" class="sub-content">
+                ETL testing, BOXI validation, and SQL backend verification.
+            </div>
+        </div>
+
+        <div class="sub-card">
+            <div class="sub-header" onclick="toggleSub('p4', this)">
+                Kaiser OPPR <span>▶</span>
+            </div>
+            <div id="p4" class="sub-content">
+                Data warehouse testing automation and framework development.
             </div>
         </div>
 
@@ -200,13 +218,13 @@ h1 {
 </div>
 
 <!-- Education -->
-<div class="section">
-    <div class="section-header" onclick="toggleSection('education')">
-        Education
+<div class="card">
+    <div class="card-header" onclick="toggleCard('education', this)">
+        Education <span class="arrow">▶</span>
     </div>
-    <div id="education" class="section-content">
+    <div id="education" class="card-content">
         <ul>
-            <li>B.E. Electrical & Electronics – University of Madras (2004)</li>
+            <li>B.E. Electrical & Electronics – University of Madras</li>
         </ul>
     </div>
 </div>
@@ -214,26 +232,25 @@ h1 {
 </div>
 
 <script>
-// Main section toggle
-function toggleSection(id) {
-    var section = document.getElementById(id);
+function toggleCard(id, element) {
+    const content = document.getElementById(id);
+    const arrow = element.querySelector(".arrow");
 
-    section.style.display =
-        section.style.display === "block" ? "none" : "block";
+    content.style.display =
+        content.style.display === "block" ? "none" : "block";
+
+    arrow.classList.toggle("rotate");
 }
 
-// Nested accordion (only one open at a time)
-function toggleSubSection(id) {
-    var all = document.querySelectorAll(".sub-content");
+// Nested accordion
+function toggleSub(id, el) {
+    const all = document.querySelectorAll(".sub-content");
 
-    all.forEach(function(el) {
-        if (el.id !== id) {
-            el.style.display = "none";
-        }
+    all.forEach(x => {
+        if (x.id !== id) x.style.display = "none";
     });
 
-    var current = document.getElementById(id);
-
+    const current = document.getElementById(id);
     current.style.display =
         current.style.display === "block" ? "none" : "block";
 }
