@@ -12,14 +12,13 @@ body {
     background: #f5f7fb;
 }
 
-/* Container */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 20px;
 }
 
-/* Header Card */
+/* Header */
 .header-card {
     background: white;
     padding: 25px;
@@ -29,32 +28,7 @@ body {
     margin-bottom: 20px;
 }
 
-.header-card h1 {
-    margin: 0;
-}
-
-.contact {
-    margin-top: 10px;
-    color: #555;
-}
-
-/* Download Button */
-.download-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
-    background: #4da6ff;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.download-btn:hover {
-    background: #3399ff;
-}
-
-/* Card sections */
+/* Cards */
 .card {
     background: white;
     border-radius: 16px;
@@ -63,14 +37,13 @@ body {
     overflow: hidden;
 }
 
-/* Light Blue Header */
+/* Light blue headers */
 .card-header {
     padding: 15px 20px;
     cursor: pointer;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background: #e6f2ff;
 }
 
@@ -78,16 +51,6 @@ body {
     background: #d9ecff;
 }
 
-/* Arrow */
-.arrow {
-    transition: transform 0.3s;
-}
-
-.rotate {
-    transform: rotate(90deg);
-}
-
-/* Content */
 .card-content {
     display: none;
     padding: 15px 20px;
@@ -99,7 +62,7 @@ li {
     margin-bottom: 12px;
 }
 
-/* Nested project cards */
+/* Nested */
 .sub-card {
     border: 1px solid #eee;
     border-radius: 12px;
@@ -109,7 +72,6 @@ li {
 .sub-header {
     padding: 12px;
     cursor: pointer;
-    font-weight: 500;
     display: flex;
     justify-content: space-between;
     background: #f2f8ff;
@@ -125,9 +87,32 @@ li {
     border-top: 1px solid #eee;
 }
 
-/* Smooth */
-.card-content, .sub-content {
-    transition: all 0.3s ease;
+/* Arrow */
+.arrow {
+    transition: transform 0.3s;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+/* Download Section */
+.download-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.download-btn {
+    padding: 12px 20px;
+    background: #4da6ff;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.download-btn:hover {
+    background: #3399ff;
 }
 </style>
 </head>
@@ -139,14 +124,7 @@ li {
 <!-- Header -->
 <div class="header-card">
     <h1>Sriram Raghavan</h1>
-    <div class="contact">
-        📞 +91-9941374772 | ✉️ Sriram.r83@gmail.com
-    </div>
-
-    <!-- Download Resume -->
-    <a href="Sriram_Raghavan_Resume.pdf" download class="download-btn">
-        ⬇ Download Resume (PDF)
-    </a>
+    <p>📞 +91-9941374772 | ✉️ Sriram.r83@gmail.com</p>
 </div>
 
 <!-- Profile -->
@@ -173,6 +151,21 @@ li {
             <li><b>QA Tools:</b> Selenium, UFT, TestNG, Postman</li>
             <li><b>Languages:</b> Java, Python, VBScript</li>
             <li><b>Cloud:</b> Azure DevOps, AWS S3</li>
+            <li><b>Data:</b> SQL, Parquet, JSON, Pandas</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Experience -->
+<div class="card">
+    <div class="card-header" onclick="toggleCard('experience', this)">
+        Experience <span class="arrow">▶</span>
+    </div>
+    <div id="experience" class="card-content">
+        <ul>
+            <li><b>DXC Technologies</b> (2010 – Present) – Sr Analyst I Software Engineering</li>
+            <li><b>Wipro Technologies</b> (2008 – 2010) – Senior Test Engineer</li>
+            <li><b>HCL Technologies</b> (2005 – 2007) – Test Engineer</li>
         </ul>
     </div>
 </div>
@@ -186,42 +179,61 @@ li {
     <div id="projects" class="card-content">
 
         <div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p1', this)">
+            <div class="sub-header" onclick="toggleSub('p1')">
                 Chevron MCBU <span>▶</span>
             </div>
             <div id="p1" class="sub-content">
-                Managed QA services and automation delivery for Chevron MCBU.
+                Managed QA services and automation delivery for Chevron MCBU supporting multiple enterprise applications.
             </div>
         </div>
 
         <div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p2', this)">
+            <div class="sub-header" onclick="toggleSub('p2')">
                 Daily Allocation & IEMF <span>▶</span>
             </div>
             <div id="p2" class="sub-content">
-                Led automation and functional testing using Selenium frameworks.
+                Led automation and functional testing using Selenium frameworks across multiple systems.
             </div>
         </div>
 
         <div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p3', this)">
+            <div class="sub-header" onclick="toggleSub('p3')">
                 AT&T Dolphin <span>▶</span>
             </div>
             <div id="p3" class="sub-content">
-                ETL testing, BOXI validation, and SQL backend verification.
+                Performed ETL testing, BOXI validation, and SQL backend verification for telecom systems.
             </div>
         </div>
 
         <div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p4', this)">
+            <div class="sub-header" onclick="toggleSub('p4')">
                 Kaiser OPPR <span>▶</span>
             </div>
             <div id="p4" class="sub-content">
-                Data warehouse testing automation and framework development.
+                Built automation frameworks for data warehouse testing and reusable components.
             </div>
         </div>
 
     </div>
+</div>
+
+<!-- Education -->
+<div class="card">
+    <div class="card-header" onclick="toggleCard('education', this)">
+        Education <span class="arrow">▶</span>
+    </div>
+    <div id="education" class="card-content">
+        <ul>
+            <li>B.E. Electrical & Electronics – University of Madras (2004)</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Download at Bottom -->
+<div class="download-section">
+    <a href="Sriram_Raghavan_Res.pdf" download class="download-btn">
+        ⬇ Download Resume (PDF)
+    </a>
 </div>
 
 </div>
