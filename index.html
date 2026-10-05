@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sriram Raghavan - Resume</title>
 
 <style>
+
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
@@ -19,6 +22,7 @@ body {
 }
 
 /* Header */
+
 .header-card {
     background: white;
     padding: 25px;
@@ -29,6 +33,7 @@ body {
 }
 
 /* Cards */
+
 .card {
     background: white;
     border-radius: 16px;
@@ -37,13 +42,15 @@ body {
     overflow: hidden;
 }
 
-/* Light blue headers */
+/* Main card headers */
+
 .card-header {
     padding: 15px 20px;
     cursor: pointer;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: #e6f2ff;
 }
 
@@ -58,15 +65,19 @@ body {
 }
 
 /* Lists */
+
 li {
     margin-bottom: 12px;
+    line-height: 1.5;
 }
 
-/* Nested */
+/* Nested project cards */
+
 .sub-card {
     border: 1px solid #eee;
     border-radius: 12px;
     margin-top: 10px;
+    overflow: hidden;
 }
 
 .sub-header {
@@ -74,7 +85,9 @@ li {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: #f2f8ff;
+    font-weight: 500;
 }
 
 .sub-header:hover {
@@ -88,8 +101,11 @@ li {
 }
 
 /* Arrow */
-.arrow {
-    transition: transform 0.3s;
+
+.arrow,
+.sub-arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
 
 .rotate {
@@ -97,9 +113,11 @@ li {
 }
 
 /* Download Section */
+
 .download-section {
     text-align: center;
     margin-top: 25px;
+    margin-bottom: 30px;
 }
 
 .download-btn {
@@ -109,340 +127,1176 @@ li {
     border-radius: 10px;
     text-decoration: none;
     font-weight: 500;
+    display: inline-block;
 }
 
 .download-btn:hover {
     background: #3399ff;
 }
+
+/* Header */
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.header-card p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .header-card {
+        padding: 20px 15px;
+    }
+
+    .card-header {
+        padding: 13px 15px;
+    }
+
+    .card-content {
+        padding: 12px 15px;
+    }
+
+    .sub-header {
+        padding: 11px;
+    }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
 <div class="container">
 
-<!-- Header -->
+
+<!-- ===================================================== -->
+<!-- HEADER -->
+<!-- ===================================================== -->
+
 <div class="header-card">
+
     <h1>Sriram Raghavan, PMP®</h1>
-    <p>📞 +91-9941374772 | ✉️ Sriram.r83@gmail.com</p>
+
+    <p>
+        📞 +91-9941374772 |
+        ✉️ Sriram.r83@gmail.com
+    </p>
+
 </div>
 
-<!-- Profile -->
+
+<!-- ===================================================== -->
+<!-- PROFILE SUMMARY -->
+<!-- ===================================================== -->
+
 <div class="card">
-    <div class="card-header" onclick="toggleCard('summary', this)">
-        Profile Summary <span class="arrow">▶</span>
+
+    <div class="card-header"
+         onclick="toggleCard('summary', this)">
+
+        Profile Summary
+
+        <span class="arrow">▶</span>
+
     </div>
+
+
     <div id="summary" class="card-content">
+
         <ul>
-            <li>Automation Architect & QA Leader with 20+ years designing enterprise automation 
-strategies and driving quality transformation across large-scale systems</li>
-            <li>Leveraged AI with GitHub Copilot (GHCP) accelerate development, reduce manual effort, 
-and deliver scalable solutions across test design, development, troubleshooting, and 
-knowledge enablement</li>
-            <li>Deep expertise in Playwright, Selenium, API, ETL, Python, PySpark, Azure DevOps, 
-integrating automation into CI/CD pipelines</li>
-            <li>Track record of translating business goals into automation architectures, frameworks, 
-driving POCs and risk-based quality practices with strong governance</li>
-            <li>Collaborate with stakeholders to define automation roadmaps, delivery models, and 
-investments that release confidence and outcomes</li>
-                        
+
+            <li>
+                Automation Architect & QA Leader with 20+ years designing
+                enterprise automation strategies and driving quality
+                transformation across large-scale systems.
+            </li>
+
+            <li>
+                Leveraged AI with GitHub Copilot (GHCP) to accelerate
+                development, reduce manual effort, and deliver scalable
+                solutions across test design, development, troubleshooting,
+                and knowledge enablement.
+            </li>
+
+            <li>
+                Deep expertise in Playwright, Selenium, API, ETL, Python,
+                PySpark, and Azure DevOps, integrating automation into
+                CI/CD pipelines.
+            </li>
+
+            <li>
+                Track record of translating business goals into automation
+                architectures and frameworks, driving POCs and risk-based
+                quality practices with strong governance.
+            </li>
+
+            <li>
+                Collaborate with stakeholders to define automation roadmaps,
+                delivery models, and investments that improve release
+                confidence and business outcomes.
+            </li>
+
         </ul>
+
     </div>
+
 </div>
 
-	<!-- LEADERSHIP HIGHLIGHTS -->
+
+<!-- ===================================================== -->
+<!-- LEADERSHIP HIGHLIGHTS -->
+<!-- ===================================================== -->
+
 <div class="card">
-    <div class="card-header" onclick="toggleCard('leadership', this)">
-        Leadership Highlights <span class="arrow">▶</span>
+
+    <div class="card-header"
+         onclick="toggleCard('leadership', this)">
+
+        Leadership Highlights
+
+        <span class="arrow">▶</span>
+
     </div>
+
+
     <div id="leadership" class="card-content">
+
         <ul>
-            <li>Played a key end-to-end role in the modernization of a legacy Pega application into a custom-built in-house solution, combining Business Analysis, Quality Engineering, and test leadership from conception through production. Leveraged deep Pega, Energy  domain knowledge to drive requirements and gap analysis, business stakeholder engagement, functional validation, migration assurance, automation, UAT, and production hyper care, contributing to a project that delivered approximately $1M in annual IT OPEX savings within a single Program Increment (PI)</li>
-			<li>Defined enterprise automation strategies aligned to business risk, release goals, 
-architecture, and long-term sustainability</li>
-            <li>Influenced leadership through risk-based quality insights, automation investment decisions, 
-and release readiness assessments</li>
-            <li>Defined enterprise-wide quality engineering standards and governance models to drive 
-consistency, scalability, and delivery excellence</li>
-            <li>Leading AI-enabled quality engineering transformation with a focus on data-driven 
-decisions and measurable enterprise outcomes</li>
-            <li>Led high-performing QA teams, providing architectural direction and resolving complex 
-automation challenges across enterprise platforms</li>
-                        
+
+            <li>
+                Played a key end-to-end role in the modernization of a legacy
+                Pega application into a custom-built in-house solution,
+                combining Business Analysis, Quality Engineering, and test
+                leadership from conception through production. Leveraged
+                deep Pega and Energy domain knowledge to drive requirements
+                and gap analysis, business stakeholder engagement, functional
+                validation, migration assurance, automation, UAT, and
+                production hypercare, contributing to a project that
+                delivered approximately <b>$1M in annual IT OPEX savings</b>
+                within a single Program Increment (PI).
+            </li>
+
+            <li>
+                Defined enterprise automation strategies aligned to business
+                risk, release goals, architecture, and long-term
+                sustainability.
+            </li>
+
+            <li>
+                Influenced leadership through risk-based quality insights,
+                automation investment decisions, and release readiness
+                assessments.
+            </li>
+
+            <li>
+                Defined enterprise-wide quality engineering standards and
+                governance models to drive consistency, scalability, and
+                delivery excellence.
+            </li>
+
+            <li>
+                Leading AI-enabled quality engineering transformation with
+                a focus on data-driven decisions and measurable enterprise
+                outcomes.
+            </li>
+
+            <li>
+                Led high-performing QA teams, providing architectural
+                direction and resolving complex automation challenges
+                across enterprise platforms.
+            </li>
+
         </ul>
+
     </div>
+
 </div>
-  
-<!-- Skills -->
+
+
+<!-- ===================================================== -->
+<!-- SKILLS -->
+<!-- ===================================================== -->
+
 <div class="card">
-    <div class="card-header" onclick="toggleCard('skills', this)">
-        Skillset <span class="arrow">▶</span>
+
+    <div class="card-header"
+         onclick="toggleCard('skills', this)">
+
+        Skillset
+
+        <span class="arrow">▶</span>
+
     </div>
+
+
     <div id="skills" class="card-content">
+
         <ul>
-            <li><b>Project Management:</b> PPM, PSA, SAP Fieldglass, Agile (Scrum/SAFe)</li>
-            <li><b>QA Tools:</b> Playwright, Selenium WebDriver, UFT, TestNG, ALM, QC, PostMan</li>
-            <li><b>AI & Intelligent Automation:</b> GitHub Copilot, MCP (Model Context Protocol), Prompt Engineering, AI-assisted test scripting</li>
-            <li><b>Cloud & DevOps:</b> Microsoft Azure (Pipelines, Boards, Repos, DevOps, storage containers, Azure Application Insights),AWS S3</li>
-            <li><b>Programming Languages:</b> Java, Python, VBScript</li>
-            <li><b>Frameworks & Big Data:</b> PySpark; Automation Frameworks – Hybrid, Data-Driven, Modular</li>
-            <li><b>Libraries:</b> Pandas</li>
-            <li><b>Test Types:</b> Functional, Automation, Integration, Regression, Performance, UAT, ETL, API</li>
-            <li><b>Databases/Reporting:</b> SQL, SAP BOXI, Business Objects</li>
-            <li><b>Data Formats:</b> Parquet, JSON</li>
-			<li><b>Domains:</b> Energy / Oil & Gas,Healthcare,Telecom,Retail</li>
+
+            <li>
+                <b>Project Management:</b>
+                PPM, PSA, SAP Fieldglass, Agile (Scrum/SAFe)
+            </li>
+
+            <li>
+                <b>QA Tools:</b>
+                Playwright, Selenium WebDriver, UFT, TestNG, ALM, QC, Postman
+            </li>
+
+            <li>
+                <b>AI & Intelligent Automation:</b>
+                GitHub Copilot, MCP (Model Context Protocol),
+                Prompt Engineering, AI-assisted test scripting
+            </li>
+
+            <li>
+                <b>Cloud & DevOps:</b>
+                Microsoft Azure (Pipelines, Boards, Repos, DevOps,
+                Storage Containers, Azure Application Insights),
+                AWS S3
+            </li>
+
+            <li>
+                <b>Programming Languages:</b>
+                Java, Python, VBScript
+            </li>
+
+            <li>
+                <b>Frameworks & Big Data:</b>
+                PySpark; Automation Frameworks – Hybrid,
+                Data-Driven, Modular
+            </li>
+
+            <li>
+                <b>Libraries:</b>
+                Pandas
+            </li>
+
+            <li>
+                <b>Test Types:</b>
+                Functional, Automation, Integration, Regression,
+                Performance, UAT, ETL, API
+            </li>
+
+            <li>
+                <b>Databases/Reporting:</b>
+                SQL, SAP BO/Business Objects
+            </li>
+
+            <li>
+                <b>Data Formats:</b>
+                Parquet, JSON
+            </li>
+
+            <li>
+                <b>Domains:</b>
+                Energy / Oil & Gas, Healthcare, Telecom, Retail
+            </li>
+
         </ul>
+
     </div>
+
 </div>
 
-<!-- Professional Certifications -->
+
+<!-- ===================================================== -->
+<!-- CERTIFICATIONS -->
+<!-- ===================================================== -->
+
 <div class="card">
-    <div class="card-header" onclick="toggleCard('certifications', this)">
-        Professional Certifications <span class="arrow">▶</span>
+
+    <div class="card-header"
+         onclick="toggleCard('certifications', this)">
+
+        Professional Certifications
+
+        <span class="arrow">▶</span>
+
     </div>
+
+
     <div id="certifications" class="card-content">
+
         <ul>
-            <li>Project Management Professional (PMP)® – PMI</li>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>Microsoft Azure - AZ900 & AI900</li>
-            <li>ISTQB – Advanced Level Test manager</li>
-	        <li>Certified Scrum Master</li>
-            <li>HP Accredited integration Specialist (AIS)</li>
+
+            <li>
+                Project Management Professional (PMP®) – PMI
+            </li>
+
+            <li>
+                AWS Certified Cloud Practitioner
+            </li>
+
+            <li>
+                Microsoft Azure – AZ-900 & AI-900
+            </li>
+
+            <li>
+                ISTQB – Advanced Level Test Manager
+            </li>
+
+            <li>
+                Certified Scrum Master
+            </li>
+
+            <li>
+                HP Accredited Integration Specialist (AIS)
+            </li>
+
         </ul>
+
     </div>
-</div>
-	
-<!-- Experience -->
-<div class="card">
-    <div class="card-header" onclick="toggleCard('experience', this)">
-        Experience <span class="arrow">▶</span>
-    </div>
-    <div id="experience" class="card-content">
-        <ul>
-			<li><b>Dexian</b> (2026 – Present) – Consulting Delivery Lead QA</li>
-            <li><b>DXC Technologies</b> (2010 – 2026) – Sr Analyst I Software Engineering</li>
-            <li><b>Wipro Technologies</b> (2008 – 2010) – Senior Test Engineer</li>
-            <li><b>HCL Technologies</b> (2005 – 2007) – Test Engineer</li>
-        </ul>
-    </div>
+
 </div>
 
-<!-- Key Projects -->
+
+<!-- ===================================================== -->
+<!-- EXPERIENCE -->
+<!-- ===================================================== -->
+
 <div class="card">
-    <div class="card-header" onclick="toggleCard('projects', this)">
-        Key Projects <span class="arrow">▶</span>
+
+    <div class="card-header"
+         onclick="toggleCard('experience', this)">
+
+        Experience
+
+        <span class="arrow">▶</span>
+
     </div>
+
+
+    <div id="experience" class="card-content">
+
+        <ul>
+
+            <li>
+                <b>Dexian</b> (2026 – Present) –
+                Consulting Delivery Lead QA
+            </li>
+
+            <li>
+                <b>DXC Technologies</b> (2010 – 2026) –
+                Sr Analyst I Software Engineering
+            </li>
+
+            <li>
+                <b>Wipro Technologies</b> (2008 – 2010) –
+                Senior Test Engineer
+            </li>
+
+            <li>
+                <b>HCL Technologies</b> (2005 – 2007) –
+                Test Engineer
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- KEY PROJECTS -->
+<!-- ===================================================== -->
+
+<div class="card">
+
+    <div class="card-header"
+         onclick="toggleCard('projects', this)">
+
+        Key Projects
+
+        <span class="arrow">▶</span>
+
+    </div>
+
 
     <div id="projects" class="card-content">
-<div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p1')">
-                Application Modernization – Energy Domain <span>▶</span>
-            </div>
-            <div id="p1" class="sub-content">
-                <ul>
-                    <li>Provided end-to-end Business Analysis, Quality Engineering, and test leadership throughout the Pega based application modernization, bridging business and technical stakeholders from requirements and gap analysis through solution validation, UAT, automation, production readiness, and post-go-live hyper care</li>
-                    <li>Defined the end-to-end quality strategy, test scope, priorities, entry/exit criteria, and execution plan across functional, integration, end-to-end, regression, migration, and production validation</li>
-                    <li>Combined QA leadership with business analysis, leveraging Pega expertise to elicit requirements, clarify workflows and business rules, identify functional gaps, and validate parity with the replacement application</li>
-                    <li>GitHub Copilot & AI-Assisted Engineering: Leveraged GitHub Copilot to structure and refine requirements.md, analyze legacy Pega functionality, identify and document functional gaps, validate business rules and workflows, support requirements traceability, and assist in reviewing and validating the target application against documented requirements</li>
-					<li>Playwright Automation: Provided hands-on leadership in Playwright automation by designing and developing workflow scripts while guiding the team on automation approach, script design, and implementation for repeatable end-to-end and regression validation</li>
-					<li>Led comparative UI and functional testing, migration validation, database verification, and Azure Storage validation, confirming data accuracy, persistence, file processing, and integration outcomes</li>
-					<li>UAT Coordination & Business Acceptance: Supported UAT kickoff by aligning business users on scope, test scenarios, execution approach, and expected outcomes; facilitated UAT execution, issue clarification, defect tracking, and validation of business acceptance criteria</li>
-					<li>Directed defect triage, root-cause analysis, retesting, quality reporting, release readiness, user provisioning, role-based access validation, and post-go-live hype care</li>
-					<li>Bridged business and technical stakeholders throughout modernization, production transition, and stabilization</li>
-					
-                </ul>
-            </div>
-        </div>
-        <div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p2')">
-               Energy-Oil & Natural Gas Domain <span>▶</span>
-            </div>
-            <div id="p1" class="sub-content">
-                <ul>
-                    <li>Architected and delivered managed QA services for Client's MCBU supporting 10+ custom applications and geological/geophysical platforms (OMNI Centaur,PLWOL, Joyn Middleware,TASQ, Energy Components, operations support)</li>
-                    <li>Directed automation strategy and implementation using Selenium WebDriver, UFT, and TestNG, building scalable frameworks for smoke and regression testing and improving overall test efficiency.</li>
-                    <li>Managed cross-functional QA teams, including hiring, onboarding, mentoring, and performance management, ensuring delivery against aggressive timelines and quality goals</li>
-                    <li>Managed full testing lifecycle (functional, integration, system, UAT, regression, and production), ensuring quality across complex, multi-system environments</li>
-					<li>Implemented robust QA processes and delivery models aligned with SAFe, DevOps, API, and PEGA ecosystems, enabling seamless QA integration across enterprise IT operations</li>
-					<li>Reduced critical defect leakage through introduction of pre-release quality gates and automated regression suites for key applications</li>
-					<li>Validated JSON and Parquet datasets using Python/PySpark for JOYN and TASQ applications, ensuring high-quality input data for downstream AI/ML processing</li>
-					<li>Applied AI-assisted tools such as GitHub Copilot to accelerate automation development, enhance test design, and support log  analysis</li>
-					<li>Performed database and ETL validation, ensuring data accuracy and integrity across business-critical workflows and deployments</li>
-					<li>Managed project governance and delivery operations, including planning, scheduling, scope management, and reporting using PPM tools</li>
-					<li>Collaborated with stakeholders and leadership, providing delivery insights, risk analysis, and performance metrics through regular status reports and service reviews</li>
-					<li>Conducted Performance Service Reviews (PSR), Monthly Business Reviews, presenting workload trends, resource planning, and service performance to support strategic decision-making</li>
-					<li>Managed QA financials, including demand planning, cost control, and reporting across PPM/PSA/Fieldglass tools</li>
-					<li>Performed account health governance (RAG status) across scope, schedule, budget, and risks, delivering actionable insights to senior leadership</li>
-					<li>Managed contract and resource management, including work orders, timesheets, invoicing, and vendor coordination using SAP Fieldglass</li>
-                </ul>
-            </div>
-        </div>
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT 1 -->
+        <!-- ================================================= -->
 
         <div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p3')">
-                Telecommunications <span>▶</span>
+
+            <div class="sub-header"
+                 onclick="toggleSub('p1', this)">
+
+                Application Modernization – Energy Domain
+
+                <span class="sub-arrow">▶</span>
+
             </div>
+
+
+            <div id="p1" class="sub-content">
+
+                <ul>
+
+                    <li>
+                        Provided end-to-end Business Analysis, Quality
+                        Engineering, and test leadership throughout the
+                        Pega-based application modernization, bridging
+                        business and technical stakeholders from requirements
+                        and gap analysis through solution validation, UAT,
+                        automation, production readiness, and post-go-live
+                        hypercare.
+                    </li>
+
+                    <li>
+                        Defined the end-to-end quality strategy, test scope,
+                        priorities, entry/exit criteria, and execution plan
+                        across functional, integration, end-to-end,
+                        regression, migration, and production validation.
+                    </li>
+
+                    <li>
+                        Combined QA leadership with business analysis,
+                        leveraging Pega expertise to elicit requirements,
+                        clarify workflows and business rules, identify
+                        functional gaps, and validate parity with the
+                        replacement application.
+                    </li>
+
+                    <li>
+                        <b>GitHub Copilot & AI-Assisted Engineering:</b>
+                        Leveraged GitHub Copilot to structure and refine
+                        requirements.md, analyze legacy Pega functionality,
+                        identify and document functional gaps, validate
+                        business rules and workflows, support requirements
+                        traceability, and assist in reviewing and validating
+                        the target application against documented
+                        requirements.
+                    </li>
+
+                    <li>
+                        <b>Playwright Automation:</b>
+                        Provided hands-on leadership in Playwright automation
+                        by designing and developing workflow scripts while
+                        guiding the team on automation approach, script design,
+                        and implementation for repeatable end-to-end and
+                        regression validation.
+                    </li>
+
+                    <li>
+                        Led comparative UI and functional testing, migration
+                        validation, database verification, and Azure Storage
+                        validation, confirming data accuracy, persistence,
+                        file processing, and integration outcomes.
+                    </li>
+
+                    <li>
+                        <b>UAT Coordination & Business Acceptance:</b>
+                        Supported UAT kickoff by aligning business users on
+                        scope, test scenarios, execution approach, and
+                        expected outcomes; facilitated UAT execution, issue
+                        clarification, defect tracking, and validation of
+                        business acceptance criteria.
+                    </li>
+
+                    <li>
+                        Directed defect triage, root-cause analysis,
+                        retesting, quality reporting, release readiness,
+                        user provisioning, role-based access validation,
+                        and post-go-live hypercare.
+                    </li>
+
+                    <li>
+                        Bridged business and technical stakeholders throughout
+                        modernization, production transition, and
+                        stabilization.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT 2 -->
+        <!-- ================================================= -->
+
+        <div class="sub-card">
+
+            <div class="sub-header"
+                 onclick="toggleSub('p2', this)">
+
+                Energy – Oil & Natural Gas Domain
+
+                <span class="sub-arrow">▶</span>
+
+            </div>
+
+
             <div id="p2" class="sub-content">
-                 <ul>
-                    <li>Manage , Lead and plan  the activities related to Test Automation (UFT 12.5),BOXI Reports testing/ETL Testing</li>
-                    <li>Responsible for analyzing, generating, estimating and delivering Testing artifacts and ensuring that Project Processes (ITUP / Agile Standards/TDP) are implemented properly</li>
-                    <li>Planning and control meetings with client/ staff during test planning and throughout subsequent testing activities</li>
-                    <li>Driving the Knowledge transfer sessions for the effective transition required for AT&T dolphin project</li>
-					<li>Defined, developed and implemented reusable test automation framework</li>
-					<li>Setup test environment for testing including planning ,identifying test data and creation of test data using automation</li>
-					<li>Developing automation Scripts, development of reusable actions and user defined functions</li>
-					<li>Validating the Business Objects report by running the SQL queries on the database by reviewing the report requirement documentation</li>
-					<li>Validating the reporting objects in the reporter against the design specification document</li>
-					<li>Validating the load process of ETL  against  the data mapping provided with transformation rules</li>
-					<li>Providing direction and guidance to peers  on any aspect of testing, including training for testers wherever appropriate</li>
-					
+
+                <ul>
+
+                    <li>
+                        Architected and delivered managed QA services for
+                        Client's MCBU supporting 10+ custom applications and
+                        geological/geophysical platforms (OMNI Centaur,
+                        PLWOL, JOYN Middleware, TASQ, Energy Components,
+                        operations support).
+                    </li>
+
+                    <li>
+                        Directed automation strategy and implementation using
+                        Selenium WebDriver, UFT, and TestNG, building scalable
+                        frameworks for smoke and regression testing and
+                        improving overall test efficiency.
+                    </li>
+
+                    <li>
+                        Managed cross-functional QA teams, including hiring,
+                        onboarding, mentoring, and performance management,
+                        ensuring delivery against aggressive timelines and
+                        quality goals.
+                    </li>
+
+                    <li>
+                        Managed full testing lifecycle including functional,
+                        integration, system, UAT, regression, and production
+                        testing across complex, multi-system environments.
+                    </li>
+
+                    <li>
+                        Implemented robust QA processes and delivery models
+                        aligned with SAFe, DevOps, API, and Pega ecosystems,
+                        enabling seamless QA integration across enterprise
+                        IT operations.
+                    </li>
+
+                    <li>
+                        Reduced critical defect leakage through introduction
+                        of pre-release quality gates and automated regression
+                        suites for key applications.
+                    </li>
+
+                    <li>
+                        Validated JSON and Parquet datasets using Python and
+                        PySpark for JOYN and TASQ applications, ensuring
+                        high-quality input data for downstream AI/ML
+                        processing.
+                    </li>
+
+                    <li>
+                        Applied AI-assisted tools such as GitHub Copilot to
+                        accelerate automation development, enhance test
+                        design, and support log analysis.
+                    </li>
+
+                    <li>
+                        Performed database and ETL validation, ensuring data
+                        accuracy and integrity across business-critical
+                        workflows and deployments.
+                    </li>
+
+                    <li>
+                        Managed project governance and delivery operations,
+                        including planning, scheduling, scope management,
+                        and reporting using PPM tools.
+                    </li>
+
+                    <li>
+                        Collaborated with stakeholders and leadership,
+                        providing delivery insights, risk analysis, and
+                        performance metrics through regular status reports
+                        and service reviews.
+                    </li>
+
+                    <li>
+                        Conducted Performance Service Reviews (PSR) and
+                        Monthly Business Reviews, presenting workload trends,
+                        resource planning, and service performance to support
+                        strategic decision-making.
+                    </li>
+
+                    <li>
+                        Managed QA financials, including demand planning,
+                        cost control, and reporting across PPM/PSA/Fieldglass
+                        tools.
+                    </li>
+
+                    <li>
+                        Performed account health governance (RAG status)
+                        across scope, schedule, budget, and risks, delivering
+                        actionable insights to senior leadership.
+                    </li>
+
+                    <li>
+                        Managed contract and resource management, including
+                        work orders, timesheets, invoicing, and vendor
+                        coordination using SAP Fieldglass.
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
 
+
+        <!-- ================================================= -->
+        <!-- PROJECT 3 -->
+        <!-- ================================================= -->
+
         <div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p4')">
-                Healthcare <span>▶</span>
+
+            <div class="sub-header"
+                 onclick="toggleSub('p3', this)">
+
+                Telecommunications
+
+                <span class="sub-arrow">▶</span>
+
             </div>
+
+
             <div id="p3" class="sub-content">
-                 <ul>
-                    <li>Design and Development of Automation Framework (Hybrid Framework),development of Reusable Actions and functions (user defined functions in UFT)</li>
-                    <li>Design and development of Database related functions (access the database, accessing the record set and using it in the automation scripts) using VBScript to support the ETL team</li>
-                    <li>Creation of Test Generation Tool to generate and validate the test data Files ,that can be  replaced with the Golden Gate Extract files at the time of ETL job execution and validation </li>
-                    <li>As a part of Datawarehouse testing, creation of  test automation suite using QTP 9.2 for test data setup for POS-GL and DW-GL scenarios</li>
-					<li>Creation of Individual automation scripts using QTP 9.2 to validate  User access,groups & roles administration across various applications for Security testing</li>
-					<li>As a part of Performance testing,creation of  automation scripts for prerequisite</li>
-					<li>Identification of suitable framework  for automation and implementing the same</li>
-					<li>Identification of reusable components and development of reusable actions and functions</li>
-					<li>Daily execution of automation batches across different environments for Test data setup </li>
-					<li>Lead, plan and direct the activities related to BOXI Reports testing,Canned /Adhoc Reports testing and Label testing</li>
-					<li>Manage and measure performance and delivery against work plans, and take corrective action where necessary</li>
-					<li>Planning and control meetings with client/ staff during test planning and throughout subsequent testing activities</li>
-					
+
+                <ul>
+
+                    <li>
+                        Managed, led, and planned activities related to Test
+                        Automation (UFT 12.5), BOXI Reports testing, and ETL
+                        testing.
+                    </li>
+
+                    <li>
+                        Responsible for analyzing, generating, estimating,
+                        and delivering testing artifacts while ensuring
+                        project processes (ITUP / Agile Standards / TDP)
+                        were implemented effectively.
+                    </li>
+
+                    <li>
+                        Conducted planning and control meetings with clients
+                        and staff during test planning and throughout
+                        subsequent testing activities.
+                    </li>
+
+                    <li>
+                        Drove knowledge transfer sessions for effective
+                        transition required for the AT&T Dolphin project.
+                    </li>
+
+                    <li>
+                        Defined, developed, and implemented reusable test
+                        automation frameworks.
+                    </li>
+
+                    <li>
+                        Set up test environments, including test data
+                        planning, identification, and automated test data
+                        creation.
+                    </li>
+
+                    <li>
+                        Developed automation scripts, reusable actions, and
+                        user-defined functions.
+                    </li>
+
+                    <li>
+                        Validated Business Objects reports by executing SQL
+                        queries against databases and reviewing report
+                        requirement documentation.
+                    </li>
+
+                    <li>
+                        Validated reporting objects against design
+                        specification documents.
+                    </li>
+
+                    <li>
+                        Validated ETL load processes against data mappings
+                        and transformation rules.
+                    </li>
+
+                    <li>
+                        Provided direction and guidance to peers on testing,
+                        including training and knowledge sharing.
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT 4 -->
+        <!-- ================================================= -->
 
         <div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p5')">
-                Retail <span>▶</span>
+
+            <div class="sub-header"
+                 onclick="toggleSub('p4', this)">
+
+                Healthcare
+
+                <span class="sub-arrow">▶</span>
+
             </div>
+
+
             <div id="p4" class="sub-content">
-               <ul>
-                    <li>Identification of suitable framework  for automation and implementing the same</li>
-                    <li>Developing automation Scripts using QTP 9.2</li>
-                    <li>Identification of reusable components and development of reusable actions and functions</li>
-                    <li>Developing Test Suites for Batch Run  execution using QC 9.2</li>
-					<li>Daily execution of automation batches across different environments and reporting the results</li>
-					<li>Determining the stability of the builds through batch executions</li>
-					<li>Managing Quality Center Users </li>
-					<li>Managing User Connections and Licenses in QC</li>
-			
-					
+
+                <ul>
+
+                    <li>
+                        Designed and developed automation frameworks
+                        (Hybrid Framework), reusable actions, and
+                        user-defined functions using UFT.
+                    </li>
+
+                    <li>
+                        Designed and developed database-related functions
+                        using VBScript to support ETL testing.
+                    </li>
+
+                    <li>
+                        Created a Test Generation Tool to generate and
+                        validate test data files for ETL job execution and
+                        validation.
+                    </li>
+
+                    <li>
+                        Created automation suites using QTP 9.2 for test data
+                        setup supporting POS-GL and DW-GL scenarios.
+                    </li>
+
+                    <li>
+                        Developed automation scripts to validate user access,
+                        groups, and role administration across applications
+                        for security testing.
+                    </li>
+
+                    <li>
+                        Developed automation scripts supporting performance
+                        testing prerequisites.
+                    </li>
+
+                    <li>
+                        Identified suitable automation frameworks and
+                        implemented reusable components.
+                    </li>
+
+                    <li>
+                        Executed automation batches across environments for
+                        test data setup.
+                    </li>
+
+                    <li>
+                        Led and planned activities related to BOXI reports
+                        testing, canned/ad-hoc reports testing, and label
+                        testing.
+                    </li>
+
+                    <li>
+                        Managed and measured performance and delivery against
+                        work plans and took corrective action where required.
+                    </li>
+
+                    <li>
+                        Conducted planning and control meetings with clients
+                        and staff during test planning and execution.
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
-		
-		<div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p6')">
-                Banking <span>▶</span>
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT 5 -->
+        <!-- ================================================= -->
+
+        <div class="sub-card">
+
+            <div class="sub-header"
+                 onclick="toggleSub('p5', this)">
+
+                Retail
+
+                <span class="sub-arrow">▶</span>
+
             </div>
+
+
             <div id="p5" class="sub-content">
-                 <ul>
-                    <li>Automation Feasibility study through QTP 9.2 at client location(SGB Australia)</li>
-                    <li>Involved in preparing and reviewing High Level and Low level Test Scenarios</li>
-                    <li>Preparation of documents for Coding standards, Framework & Quality Checklist</li>
-                    <li>Coordinating the onsite/offshore daily status call</li>
-					<li>Designing approach for scripting</li>
-					<li>Identification of framework </li>
-					<li>Automation of Test scripts </li>
-					<li>Development of Reusable Actions and functions</li>
-										
+
+                <ul>
+
+                    <li>
+                        Identified suitable automation frameworks and
+                        implemented them based on project requirements.
+                    </li>
+
+                    <li>
+                        Developed automation scripts using QTP 9.2.
+                    </li>
+
+                    <li>
+                        Identified reusable components and developed
+                        reusable actions and functions.
+                    </li>
+
+                    <li>
+                        Developed test suites for batch-run execution using
+                        Quality Center 9.2.
+                    </li>
+
+                    <li>
+                        Executed automation batches across environments and
+                        reported results.
+                    </li>
+
+                    <li>
+                        Determined build stability through automated batch
+                        execution.
+                    </li>
+
+                    <li>
+                        Managed Quality Center users, connections, and
+                        licenses.
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
 
-		<div class="sub-card">
-            <div class="sub-header" onclick="toggleSub('p7')">
-               US,Australia Tax Preparation <span>▶</span>
+
+        <!-- ================================================= -->
+        <!-- PROJECT 6 -->
+        <!-- ================================================= -->
+
+        <div class="sub-card">
+
+            <div class="sub-header"
+                 onclick="toggleSub('p6', this)">
+
+                Banking
+
+                <span class="sub-arrow">▶</span>
+
             </div>
+
+
             <div id="p6" class="sub-content">
-                 <ul>
-                    <li>Review of Design Document for Automation and updating the issues through Lotus Notes</li>
-                    <li>Designing approach for scripting</li>
-                    <li>Preparation of Datasheets </li>
-                    <li>Automation of Test scripts </li>
-					<li>Development of Reusable Actions and functions</li>
-					<li>Uploading and running scripts in the Quality Centre</li>
-					<li>Implementation of Quality Checklist and Templates</li>
-										
+
+                <ul>
+
+                    <li>
+                        Conducted automation feasibility studies using QTP
+                        9.2 at the client location.
+                    </li>
+
+                    <li>
+                        Prepared and reviewed high-level and low-level test
+                        scenarios.
+                    </li>
+
+                    <li>
+                        Prepared documentation for coding standards,
+                        frameworks, and quality checklists.
+                    </li>
+
+                    <li>
+                        Coordinated onsite/offshore daily status calls.
+                    </li>
+
+                    <li>
+                        Designed scripting approaches and automation
+                        strategies.
+                    </li>
+
+                    <li>
+                        Identified appropriate automation frameworks.
+                    </li>
+
+                    <li>
+                        Automated test scripts and developed reusable
+                        actions and functions.
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
-		
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT 7 -->
+        <!-- ================================================= -->
+
+        <div class="sub-card">
+
+            <div class="sub-header"
+                 onclick="toggleSub('p7', this)">
+
+                US & Australia Tax Preparation
+
+                <span class="sub-arrow">▶</span>
+
+            </div>
+
+
+            <div id="p7" class="sub-content">
+
+                <ul>
+
+                    <li>
+                        Reviewed design documents for automation and tracked
+                        issues through Lotus Notes.
+                    </li>
+
+                    <li>
+                        Designed scripting approaches.
+                    </li>
+
+                    <li>
+                        Prepared test data sheets.
+                    </li>
+
+                    <li>
+                        Automated test scripts.
+                    </li>
+
+                    <li>
+                        Developed reusable actions and functions.
+                    </li>
+
+                    <li>
+                        Uploaded and executed scripts through Quality Center.
+                    </li>
+
+                    <li>
+                        Implemented quality checklists and templates.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
     </div>
+
 </div>
 
-<!-- Recognitions -->
+
+<!-- ===================================================== -->
+<!-- RECOGNITIONS -->
+<!-- ===================================================== -->
+
 <div class="card">
-    <div class="card-header" onclick="toggleCard('rewards', this)">
-        Recognitions <span class="arrow">▶</span>
+
+    <div class="card-header"
+         onclick="toggleCard('rewards', this)">
+
+        Recognitions
+
+        <span class="arrow">▶</span>
+
     </div>
+
+
     <div id="rewards" class="card-content">
+
         <ul>
-            <li>FY23 – Q4, FY23 Q2, FY22 Q1 DXC Champs Awards – for consistent commitment to excellence. Exceptional Impact performer for consecutive years</li>
-            <li>Internal Facilitator Reward for contribution made towards Learning and development of the organization</li>
-            <li>DXC Recognition Emerald Award for extended support in Talent management</li>
-            <li>Received Certificate of Merit from the DXC organization for the outstanding efforts in Automation for Kaiser Project</li>
-	    
+
+            <li>
+                FY23 Q4, FY23 Q2, and FY22 Q1 DXC Champs Awards for
+                consistent commitment to excellence and exceptional impact
+                performance.
+            </li>
+
+            <li>
+                Internal Facilitator Reward for contribution to learning and
+                development initiatives.
+            </li>
+
+            <li>
+                DXC Recognition Emerald Award for extended support in Talent
+                Management.
+            </li>
+
+            <li>
+                Certificate of Merit from DXC for outstanding contributions
+                to Automation for the Kaiser project.
+            </li>
+
         </ul>
+
     </div>
+
 </div>
-	
-<!-- Education -->
+
+
+<!-- ===================================================== -->
+<!-- EDUCATION -->
+<!-- ===================================================== -->
+
 <div class="card">
-    <div class="card-header" onclick="toggleCard('education', this)">
-        Education <span class="arrow">▶</span>
+
+    <div class="card-header"
+         onclick="toggleCard('education', this)">
+
+        Education
+
+        <span class="arrow">▶</span>
+
     </div>
+
+
     <div id="education" class="card-content">
+
         <ul>
-            <li>B.E. Electrical & Electronics – University of Madras (2004)</li>
+
+            <li>
+                B.E. Electrical & Electronics –
+                University of Madras (2004)
+            </li>
+
         </ul>
+
     </div>
+
 </div>
 
-<!-- Download at Bottom -->
+
+<!-- ===================================================== -->
+<!-- DOWNLOAD -->
+<!-- ===================================================== -->
+
 <div class="download-section">
-    <a href="Sriram_Raghavan_QA_Architect.pdf" download class="download-btn">
+
+    <a href="Sriram_Raghavan_QA_Architect.pdf"
+       download
+       class="download-btn">
+
         ⬇ Download Resume (PDF)
+
     </a>
-</div>
 
 </div>
+
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
 
 <script>
+
+/* ========================================================
+   MAIN CARDS
+   ======================================================== */
+
 function toggleCard(id, element) {
+
     const content = document.getElementById(id);
     const arrow = element.querySelector(".arrow");
 
-    content.style.display =
-        content.style.display === "block" ? "none" : "block";
+    const isOpen = content.style.display === "block";
 
-    arrow.classList.toggle("rotate");
+    content.style.display = isOpen ? "none" : "block";
+
+    arrow.classList.toggle("rotate", !isOpen);
+
 }
 
-function toggleSub(id) {
-    const all = document.querySelectorAll(".sub-content");
 
-    all.forEach(x => {
-        if (x.id !== id) x.style.display = "none";
+/* ========================================================
+   PROJECT SUB-CARDS
+   ======================================================== */
+
+function toggleSub(id, element) {
+
+    /* Close all project cards */
+
+    const allContents =
+        document.querySelectorAll(".sub-content");
+
+    const allArrows =
+        document.querySelectorAll(".sub-arrow");
+
+
+    allContents.forEach(function(content) {
+
+        if (content.id !== id) {
+
+            content.style.display = "none";
+
+        }
+
     });
 
-    const current = document.getElementById(id);
+
+    /* Reset all arrows */
+
+    allArrows.forEach(function(arrow) {
+
+        arrow.classList.remove("rotate");
+
+    });
+
+
+    /* Open / close selected project */
+
+    const current =
+        document.getElementById(id);
+
+    const arrow =
+        element.querySelector(".sub-arrow");
+
+
+    const isOpen =
+        current.style.display === "block";
+
+
     current.style.display =
-        current.style.display === "block" ? "none" : "block";
+        isOpen ? "none" : "block";
+
+
+    if (!isOpen) {
+
+        arrow.classList.add("rotate");
+
+    }
+
 }
+
 </script>
 
+
 </body>
+
 </html>
